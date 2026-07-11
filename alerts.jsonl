@@ -1,0 +1,12 @@
+{"timestamp": "2026-07-11T11:17:08.412804", "type": "exec_suspicious", "severity": "medium", "details": {"comm": "nc", "file": "-", "auid": "1000", "pid": "25694"}}
+{"timestamp": "2026-07-11T11:17:10.863997", "type": "exec_suspicious", "severity": "medium", "details": {"comm": "wget", "file": "-", "auid": "1000", "pid": "25696"}}
+{"timestamp": "2026-07-11T11:17:15.333387", "type": "exec_suspicious", "severity": "medium", "details": {"comm": "curl", "file": "-", "auid": "1000", "pid": "25699"}}
+{"timestamp": "2026-07-11T11:17:15.348620", "type": "access_passwd", "severity": "medium", "details": {"comm": "curl", "file": "-", "auid": "1000", "pid": "25699"}}
+{"timestamp": "2026-07-11T11:17:22.217268", "type": "access_shadow", "severity": "high", "details": {"comm": "cat", "file": "-", "auid": "1000", "pid": "25704"}}
+{"timestamp": "2026-07-11T11:21:46.783267", "type": "access_passwd", "severity": "medium", "details": {"comm": "bash", "file": "-", "auid": "1000", "pid": "25864"}}
+{"timestamp": "2026-07-11T11:27:25.963690", "type": "ssh_bruteforce", "severity": "high", "details": {"ip": "192.168.174.131", "user": "test", "attempts": 5, "pid": "26098"}}
+{"timestamp": "2026-07-11T11:50:12.575378", "type": "ssh_bruteforce", "severity": "high", "details": {"ip": "192.168.174.131", "user": "fakeuser", "attempts": 5, "pid": "26882"}}
+{"timestamp": "2026-07-11T11:51:30.178997", "type": "ssh_bruteforce", "severity": "high", "details": {"ip": "192.168.174.131", "user": "test", "attempts": 5, "pid": "26946"}}
+{"timestamp": "2026-07-11T11:54:42.477394", "type": "access_passwd", "severity": "medium", "details": {"comm": "bash", "file": "-", "auid": "1000", "pid": "27086"}}
+{"timestamp": "2026-07-11T11:55:37.179038", "type": "malware_detected", "severity": "high", "details": {"comm": "fake_malware.sh", "file": "-", "auid": "1000", "pid": "27124", "trigger_key": "exec_from_tmp"}}
+{"timestamp": "2026-07-11T11:57:42.933445", "type": "malware_detected", "severity": "high", "details": {"comm": "fake_malware.sh", "file": "-", "auid": "1000", "pid": "27187", "trigger_key": "exec_from_tmp"}}

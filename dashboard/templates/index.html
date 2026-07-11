@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPS // Sentinel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-mark">HIPS <span>// Sentinel</span></div>
+      <div class="brand-sub">surveillance auditd + ssh</div>
+    </div>
+    <div class="topbar-right">
+      <div class="host-tag">hôte <strong id="host-ip">—</strong></div>
+      <div class="clock" id="clock">--:--:--</div>
+    </div>
+  </div>
+
+  <div class="pulse-strip" id="pulse-strip">
+    <svg viewBox="0 0 400 28" preserveAspectRatio="none">
+      <polyline class="pulse-line" id="pulse-line"
+        points="0,14 40,14 55,4 70,24 85,14 400,14" />
+    </svg>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="eyebrow">Vue d'ensemble</p>
+      <div class="stat-grid">
+        <div class="stat-cell">
+          <div class="n" id="stat-total">0</div>
+          <div class="l">Total</div>
+        </div>
+        <div class="stat-cell high">
+          <div class="n" id="stat-high">0</div>
+          <div class="l">Haute</div>
+        </div>
+        <div class="stat-cell medium">
+          <div class="n" id="stat-medium">0</div>
+          <div class="l">Moyenne</div>
+        </div>
+        <div class="stat-cell low">
+          <div class="n" id="stat-low">0</div>
+          <div class="l">Basse</div>
+        </div>
+      </div>
+
+      <p class="eyebrow">Répartition par type</p>
+      <div class="type-list" id="type-list">
+        <!-- rempli en JS -->
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-header">
+        <h1>Flux d'alertes</h1>
+        <div class="live-dot" id="live-dot">en écoute</div>
+      </div>
+
+      <div class="error-banner" id="error-banner">
+        Connexion au serveur perdue. Nouvelle tentative en cours…
+      </div>
+
+      <div class="log-feed" id="log-feed">
+        <div class="empty-state" id="empty-state">
+          <div class="title">Aucune alerte pour le moment</div>
+          <div class="sub">Le système est silencieux. Les nouvelles alertes apparaîtront ici automatiquement.</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

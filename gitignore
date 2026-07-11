@@ -1,0 +1,21 @@
+# Données générées à l'exécution — jamais dans le dépôt
+alerts.jsonl
+actions.log
+
+# Wordlists de test brute force (si présentes dans le dossier)
+password.txt
+*.wordlist
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Éditeurs
+*.swp
+.vscode/
+.idea/
+
+# Système
+.DS_Store
